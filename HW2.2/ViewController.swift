@@ -5,7 +5,6 @@
 //  Created by Михаил Малышев on 29/02/2020.
 //  Copyright © 2020 Mikhail Malyshev. All rights reserved.
 //
-// try1
 import UIKit
 
 class ViewController: UIViewController {
@@ -31,12 +30,12 @@ class ViewController: UIViewController {
         valueOfBlueColor.text = String(sliderOfBlueColor.value)
     }
     
-    func changeColor() {
+    private func changeColor() {
         colorView.backgroundColor = UIColor(red: CGFloat(sliderOfRedColor.value), green: CGFloat(sliderOfGreenColor.value), blue: CGFloat(sliderOfBlueColor.value), alpha: 1)
     }
+    
     @IBAction func redSliderAction() {
         changeColor()
-//        round(x * 1000) / 1000
         valueOfRedColor.text = String(format: "%.2f", Double(sliderOfRedColor.value))
     }
     
@@ -47,6 +46,6 @@ class ViewController: UIViewController {
     
     @IBAction func blueSliderAction() {
         changeColor()
-         valueOfBlueColor.text = String(format: "%.2f", Double(sliderOfBlueColor.value))
+        valueOfBlueColor.text = String(format: "%.2f", Double(sliderOfBlueColor.value))
     }
 }
